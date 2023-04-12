@@ -15,3 +15,4 @@ clean:
 	rm -rf build/test-results
 	rm -rf build/reports
 	rm -f src/main/resources/output/*.csv
+	rm -rf src/main/resources/output/images/*.png
