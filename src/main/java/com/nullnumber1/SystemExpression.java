@@ -20,14 +20,6 @@ public class SystemExpression {
     Log log;
     Sec sec;
 
-    public SystemExpression() {
-        this.sin = new Sin();
-        this.cos = new Cos(sin);
-        this.ln = new Ln();
-        this.log = new Log(ln);
-        this.sec = new Sec(cos);
-    }
-
     public SystemExpression(Sin sin, Cos cos, Sec sec, Ln ln, Log log) {
         this.sin = sin;
         this.cos = cos;
