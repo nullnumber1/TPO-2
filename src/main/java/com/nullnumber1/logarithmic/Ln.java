@@ -39,7 +39,7 @@ public class Ln {
         return -1;
     }
 
-    public void writeResultToCsv(final String filename, final Ln function, final double from, final double to, final double step, final double eps) throws IOException {
+    public void writeResultToCsv(final String filename, final double from, final double to, final double step, final double eps) throws IOException {
         final Path path = Paths.get(filename);
         final File file = new File(path.toUri());
         if (file.exists()) {
@@ -48,7 +48,7 @@ public class Ln {
         file.createNewFile();
         try (PrintWriter printWriter = new PrintWriter(file)) {
             for (double current = from; current <= to; current += step) {
-                printWriter.println(current + "," + function.ln(current, eps));
+                printWriter.println(current + "," + ln(current, eps));
             }
         }
     }

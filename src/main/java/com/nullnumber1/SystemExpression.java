@@ -54,7 +54,7 @@ public class SystemExpression {
         }
     }
 
-    public void writeResultToCsv(final String filename, final SystemExpression function, final double from, final double to, final double step, final double eps) throws IOException {
+    public void writeResultToCsv(final String filename, final double from, final double to, final double step, final double eps) throws IOException {
         final Path path = Paths.get(filename);
         final File file = new File(path.toUri());
         if (file.exists()) {
@@ -64,7 +64,7 @@ public class SystemExpression {
 
         try (PrintWriter printWriter = new PrintWriter(file)) {
             for (double current = from; current <= to; current += step) {
-                printWriter.println(current + "," + function.systemSolve(current, eps));
+                printWriter.println(current + "," + systemSolve(current, eps));
             }
         }
     }
