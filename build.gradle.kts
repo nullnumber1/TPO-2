@@ -12,6 +12,7 @@ repositories {
 
 dependencies {
     implementation("org.apache.commons:commons-csv:1.10.0")
+    implementation("org.knowm.xchart:xchart:3.8.3")
     testImplementation(platform("org.junit:junit-bom:5.9.1"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     testImplementation("org.mockito:mockito-core:5.2.0")
